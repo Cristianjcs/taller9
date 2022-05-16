@@ -1,0 +1,18 @@
+
+.grid{
+    display:grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.grid div{
+    padding: 1em;
+}
+
+
+   .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/familia1.jpg');
+    background-size: cover;
+  }

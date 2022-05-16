@@ -1,0 +1,62 @@
+
+<br><br><div class="container">
+    
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card">
+                <div class="container">
+                    <div class="display-1" align="center">Formulario donaciones</div>
+                </div>   
+                <div class="card-body">
+                    <form [formGroup]="formValue">
+                    <div class="row">
+                        <div class="col md-6">
+                            <label for="">Nombres</label>
+                            <input type="text" class="form-control" formControlName="nombres">
+                        </div>  
+                        <div class="col md-6">
+                            <label for="">Apellidos</label>
+                            <input type="text" class="form-control" formControlName="apellidos">
+                        </div>
+                        <div class="col md-6">
+                            <label for="">Edad</label>
+                            <input type="number" class="form-control" formControlName="edad">
+                        </div>  
+                        <div class="col md-6">
+                            <label for="">Ciudad</label>
+                            <input type="text" class="form-control" formControlName="ciudad">
+                        </div>  
+                        <div class="col md-6">
+                            <label for="">Cantidad dinero a donar</label>
+                            <input type="numbre" class="form-control" formControlName="cantidad">
+                        </div>  
+                    </div><br><br>
+                    <div class="button btn btn-outline-info" type="submit" (click)="guardar_detalle(formValue)">Guardar</div>
+                </form>
+                </div> 
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col">Dinero donado</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor = "let item of data_detalle; let index=index">
+                      <tr>
+                        <td></td>
+                        <td>{{item.nombres}}</td>
+                        <td>{{item.apellidos}}</td>
+                        <td>{{item.edad}}</td>
+                        <td>{{item.ciudad}}</td>
+                        <td>{{item.cantidad}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
